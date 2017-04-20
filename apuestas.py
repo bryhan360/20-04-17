@@ -11,7 +11,7 @@ saldo = 100
 apuesta = 0
 
 
-while (Salir_menu == False):
+while Salir_menu == False:
 	
 	os.system('clear')
 	print "1 = Jugar" 
@@ -90,7 +90,7 @@ while (Salir_menu == False):
 					print "J2 Saca ", numero2 , " de", palo2 
 
 					if (jugador1 == jugador2):
-						print "Empate, la banca se queda con todo"
+						print "Empate"
 						saldo = saldo - apuesta
 					else:
 						if ( jugador1 > jugador2):
