@@ -4,14 +4,14 @@
 from random import randint
 import os
 
-Salir_menu = False
-Salir_apuesta = False
-Salir_juego = False
+salir_menu = False
+salir_apuesta = False
+salir_juego = False
 saldo = 100 
 apuesta = 0
 
 
-while Salir_menu == False:
+while salir_menu == False:
 	
 	os.system('clear')
 	print "1 = Jugar" 
@@ -20,18 +20,18 @@ while Salir_menu == False:
 	
 	if (opcion == 1):
 		
-		while Salir_apuesta == False:
+		while salir_apuesta == False:
 			
-			Salir_apuesta = False
+			salir_apuesta = False
 				
 			print "Saldo disponible ", saldo , " €"
 			apuesta=input("Quanto quiere apostar? ")
 			
 			if(apuesta >= 10 and apuesta <= saldo):
-				while (Salir_juego == False):	
+				while (salir_juego == False):	
 					
-					Salir_juego = False
-					Salir_carta = False
+					salir_juego = False
+					salir_carta = False
 					J1palo = randint(1,4) 
 					J2palo = randint(1,4)
 
@@ -59,7 +59,7 @@ while Salir_menu == False:
 
 					print "J1Saca ", numero1 , " de", palo1
 
-					while (Salir_carta == False):
+					while (salir_carta == False):
 						
 						if (jugador1 == jugador2 and J1palo == J2palo):
 							jugador2 = randint(2,14)
@@ -102,12 +102,12 @@ while Salir_menu == False:
 							
 					print "Saldo disponible ", saldo , " €"
 					tecla=raw_input("Introduzca tecla para continuar ")
-					Salir_juego = True
-					Salir_apuesta = True
+					salir_juego = True
+					salir_apuesta = True
 			else: 
 				print "Imposible apostar menos de 10 euros " 
 	
 	if (opcion == -1 or saldo < 10):
 		print "Quedas fuera no tenes suficiente saldo para apostar"
 		print "Quedas fuera de combate "
-Salir_menu = True
+salir_menu = True
